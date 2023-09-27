@@ -10,7 +10,7 @@ namespace Spryker\Glue\ShipmentsBackendApi\Processor\Reader;
 use Generated\Shared\Transfer\SalesShipmentCriteriaTransfer;
 use Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer;
 
-interface SalesShipmentReaderInterface
+interface SalesShipmentResourceReaderInterface
 {
     /**
      * @param \Generated\Shared\Transfer\SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer

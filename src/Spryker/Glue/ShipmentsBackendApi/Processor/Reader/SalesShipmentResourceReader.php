@@ -12,7 +12,7 @@ use Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer;
 use Spryker\Glue\ShipmentsBackendApi\Dependency\Facade\ShipmentsBackendApiToShipmentFacadeInterface;
 use Spryker\Glue\ShipmentsBackendApi\Processor\Mapper\SalesShipmentMapperInterface;
 
-class SalesShipmentReader implements SalesShipmentReaderInterface
+class SalesShipmentResourceReader implements SalesShipmentResourceReaderInterface
 {
     /**
      * @var \Spryker\Glue\ShipmentsBackendApi\Processor\Mapper\SalesShipmentMapperInterface

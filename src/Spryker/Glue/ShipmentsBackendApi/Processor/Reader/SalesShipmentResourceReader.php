@@ -24,21 +24,12 @@ class SalesShipmentResourceReader implements SalesShipmentResourceReaderInterfac
      */
     protected ShipmentsBackendApiToShipmentFacadeInterface $shipmentFacade;
 
-    /**
-     * @param \Spryker\Glue\ShipmentsBackendApi\Processor\Mapper\SalesShipmentMapperInterface $salesShipmentMapper
-     * @param \Spryker\Glue\ShipmentsBackendApi\Dependency\Facade\ShipmentsBackendApiToShipmentFacadeInterface $shipmentFacade
-     */
     public function __construct(SalesShipmentMapperInterface $salesShipmentMapper, ShipmentsBackendApiToShipmentFacadeInterface $shipmentFacade)
     {
         $this->salesShipmentMapper = $salesShipmentMapper;
         $this->shipmentFacade = $shipmentFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer
-     */
     public function getSalesShipmentResourceCollection(SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer): SalesShipmentResourceCollectionTransfer
     {
         $salesShipmentCollectionTransfer = $this->shipmentFacade->getSalesShipmentCollection($salesShipmentCriteriaTransfer);

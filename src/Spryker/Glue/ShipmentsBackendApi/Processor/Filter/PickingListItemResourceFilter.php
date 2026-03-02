@@ -35,11 +35,6 @@ class PickingListItemResourceFilter implements PickingListItemResourceFilterInte
         return $pickingListItemsResourceTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueResourceTransfer $glueResourceTransfer
-     *
-     * @return bool
-     */
     protected function isApplicablePickingListItemsResource(
         GlueResourceTransfer $glueResourceTransfer
     ): bool {

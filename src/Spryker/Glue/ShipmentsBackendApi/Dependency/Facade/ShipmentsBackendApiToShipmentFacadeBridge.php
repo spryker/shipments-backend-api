@@ -25,11 +25,6 @@ class ShipmentsBackendApiToShipmentFacadeBridge implements ShipmentsBackendApiTo
         $this->shipmentFacade = $shipmentFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesShipmentCollectionTransfer
-     */
     public function getSalesShipmentCollection(
         SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer
     ): SalesShipmentCollectionTransfer {

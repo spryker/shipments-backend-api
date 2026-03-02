@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\SalesShipmentCriteriaTransfer;
 
 interface ShipmentsBackendApiToShipmentFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesShipmentCollectionTransfer
-     */
     public function getSalesShipmentCollection(
         SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer
     ): SalesShipmentCollectionTransfer;

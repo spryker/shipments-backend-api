@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer;
 
 interface SalesShipmentResourceReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer
-     */
     public function getSalesShipmentResourceCollection(SalesShipmentCriteriaTransfer $salesShipmentCriteriaTransfer): SalesShipmentResourceCollectionTransfer;
 }

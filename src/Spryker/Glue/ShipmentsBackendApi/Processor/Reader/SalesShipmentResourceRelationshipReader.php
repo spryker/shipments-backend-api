@@ -19,9 +19,6 @@ class SalesShipmentResourceRelationshipReader implements SalesShipmentResourceRe
      */
     protected SalesShipmentResourceReaderInterface $salesShipmentResourceReader;
 
-    /**
-     * @param \Spryker\Glue\ShipmentsBackendApi\Processor\Reader\SalesShipmentResourceReaderInterface $salesShipmentResourceReader
-     */
     public function __construct(SalesShipmentResourceReaderInterface $salesShipmentResourceReader)
     {
         $this->salesShipmentResourceReader = $salesShipmentResourceReader;

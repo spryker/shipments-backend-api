@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer;
 
 interface SalesShipmentMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SalesShipmentCollectionTransfer $salesShipmentCollectionTransfer
-     * @param \Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer $salesShipmentResourceCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer
-     */
     public function mapSalesShipmentCollectionToSalesShipmentResourceCollection(
         SalesShipmentCollectionTransfer $salesShipmentCollectionTransfer,
         SalesShipmentResourceCollectionTransfer $salesShipmentResourceCollectionTransfer

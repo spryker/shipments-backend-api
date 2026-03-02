@@ -22,9 +22,6 @@ use Spryker\Glue\ShipmentsBackendApi\Processor\Reader\SalesShipmentResourceRelat
 
 class ShipmentsBackendApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ShipmentsBackendApi\Processor\Expander\PickingListsSalesShipmentsResourceRelationshipExpanderInterface
-     */
     public function createPickingListsSalesShipmentsResourceRelationshipExpander(): PickingListsSalesShipmentsResourceRelationshipExpanderInterface
     {
         return new PickingListsSalesShipmentsResourceRelationshipExpander(
@@ -33,25 +30,16 @@ class ShipmentsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ShipmentsBackendApi\Processor\Filter\PickingListItemResourceFilterInterface
-     */
     public function createPickingListItemResourceFilter(): PickingListItemResourceFilterInterface
     {
         return new PickingListItemResourceFilter();
     }
 
-    /**
-     * @return \Spryker\Glue\ShipmentsBackendApi\Processor\Reader\SalesShipmentResourceRelationshipReaderInterface
-     */
     public function createSalesShipmentResourceRelationshipReader(): SalesShipmentResourceRelationshipReaderInterface
     {
         return new SalesShipmentResourceRelationshipReader($this->createSalesShipmentResourceReader());
     }
 
-    /**
-     * @return \Spryker\Glue\ShipmentsBackendApi\Processor\Reader\SalesShipmentResourceReaderInterface
-     */
     public function createSalesShipmentResourceReader(): SalesShipmentResourceReaderInterface
     {
         return new SalesShipmentResourceReader(
@@ -60,17 +48,11 @@ class ShipmentsBackendApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ShipmentsBackendApi\Processor\Mapper\SalesShipmentMapperInterface
-     */
     public function createSalesShipmentMapper(): SalesShipmentMapperInterface
     {
         return new SalesShipmentMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ShipmentsBackendApi\Dependency\Facade\ShipmentsBackendApiToShipmentFacadeInterface
-     */
     public function getShipmentFacade(): ShipmentsBackendApiToShipmentFacadeInterface
     {
         return $this->getProvidedDependency(ShipmentsBackendApiDependencyProvider::FACADE_SHIPMENT);

@@ -16,12 +16,6 @@ use Spryker\Glue\ShipmentsBackendApi\ShipmentsBackendApiConfig;
 
 class SalesShipmentMapper implements SalesShipmentMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SalesShipmentCollectionTransfer $salesShipmentCollectionTransfer
-     * @param \Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer $salesShipmentResourceCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesShipmentResourceCollectionTransfer
-     */
     public function mapSalesShipmentCollectionToSalesShipmentResourceCollection(
         SalesShipmentCollectionTransfer $salesShipmentCollectionTransfer,
         SalesShipmentResourceCollectionTransfer $salesShipmentResourceCollectionTransfer
@@ -40,12 +34,6 @@ class SalesShipmentMapper implements SalesShipmentMapperInterface
         return $salesShipmentResourceCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTransfer $shipmentTransfer
-     * @param \Generated\Shared\Transfer\GlueResourceTransfer $salesShipmentResourceTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResourceTransfer
-     */
     protected function mapShipmentTransferToSalesShipmentResourceTransfer(
         ShipmentTransfer $shipmentTransfer,
         GlueResourceTransfer $salesShipmentResourceTransfer
@@ -61,12 +49,6 @@ class SalesShipmentMapper implements SalesShipmentMapperInterface
             ->setAttributes($salesShipmentsBackendApiAttributesTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTransfer $shipmentTransfer
-     * @param \Generated\Shared\Transfer\SalesShipmentsBackendApiAttributesTransfer $salesShipmentsBackendApiAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesShipmentsBackendApiAttributesTransfer
-     */
     protected function mapShipmentTransferToApiSalesShipmentAttributesTransfer(
         ShipmentTransfer $shipmentTransfer,
         SalesShipmentsBackendApiAttributesTransfer $salesShipmentsBackendApiAttributesTransfer

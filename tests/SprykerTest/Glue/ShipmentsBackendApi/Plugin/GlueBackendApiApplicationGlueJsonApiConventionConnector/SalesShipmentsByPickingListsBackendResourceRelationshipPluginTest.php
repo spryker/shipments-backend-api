@@ -39,9 +39,6 @@ class SalesShipmentsByPickingListsBackendResourceRelationshipPluginTest extends 
      */
     protected ShipmentsBackendApiResourceTester $tester;
 
-    /**
-     * @return void
-     */
     public function testAddRelationshipsShouldAddSalesShipmentsRelationshipToGlueResourceTransfer(): void
     {
         // Arrange
@@ -70,9 +67,6 @@ class SalesShipmentsByPickingListsBackendResourceRelationshipPluginTest extends 
         $this->assertSame($shipmentTransfer->getUuid(), $glueResourceTransfer->getId());
     }
 
-    /**
-     * @return void
-     */
     public function testAddRelationshipsShouldNotAddSalesShipmentsRelationshipToGlueResourceWithWrongType(): void
     {
         // Arrange
@@ -91,9 +85,6 @@ class SalesShipmentsByPickingListsBackendResourceRelationshipPluginTest extends 
         $this->assertCount(0, $glueResourceTransfers[0]->getRelationships());
     }
 
-    /**
-     * @return void
-     */
     public function testAddRelationshipsShouldThrowExceptionDueToEmptyOrderItemField(): void
     {
         // Arrange
@@ -111,9 +102,6 @@ class SalesShipmentsByPickingListsBackendResourceRelationshipPluginTest extends 
         (new SalesShipmentsByPickingListsBackendResourceRelationshipPlugin())->addRelationships($glueResourceTransfers, new GlueRequestTransfer());
     }
 
-    /**
-     * @return void
-     */
     public function testAddRelationshipsShouldThrowExceptionDueToEmptyOrderItemUuidField(): void
     {
         // Arrange
@@ -131,9 +119,6 @@ class SalesShipmentsByPickingListsBackendResourceRelationshipPluginTest extends 
         (new SalesShipmentsByPickingListsBackendResourceRelationshipPlugin())->addRelationships($glueResourceTransfers, new GlueRequestTransfer());
     }
 
-    /**
-     * @return void
-     */
     public function testAddRelationshipsShouldNotAddSalesShipmentsRelationshipToGlueResourceWithWrongOrderItemUuid(): void
     {
         // Arrange

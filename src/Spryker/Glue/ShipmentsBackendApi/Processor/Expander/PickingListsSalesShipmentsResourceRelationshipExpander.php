@@ -23,10 +23,6 @@ class PickingListsSalesShipmentsResourceRelationshipExpander implements PickingL
      */
     protected SalesShipmentResourceRelationshipReaderInterface $salesShipmentResourceRelationshipReader;
 
-    /**
-     * @param \Spryker\Glue\ShipmentsBackendApi\Processor\Filter\PickingListItemResourceFilterInterface $pickingListItemResourceFilter
-     * @param \Spryker\Glue\ShipmentsBackendApi\Processor\Reader\SalesShipmentResourceRelationshipReaderInterface $salesShipmentResourceRelationshipReader
-     */
     public function __construct(
         PickingListItemResourceFilterInterface $pickingListItemResourceFilter,
         SalesShipmentResourceRelationshipReaderInterface $salesShipmentResourceRelationshipReader
